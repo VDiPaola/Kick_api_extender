@@ -33,8 +33,12 @@ export class KickPlus{
                             .then(response => {
                                 //send auth to backend
                                 socket.send(JSON.stringify({message:"websocket_auth", data:{auth:response?.auth, channelName:event.data.channelName}}) )
+                                Logger.log("Enabling Overlays", true)
                             })
                             .catch(err => Logger.error("Couldnt get websocket authentication", err, true))
+                            .finally(()=>{
+                                socket.close()
+                            })
                             
                         }
                     })

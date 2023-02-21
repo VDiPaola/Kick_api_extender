@@ -22,12 +22,9 @@
     },
 
     "content_scripts": [{
-        "matches":    ["*://*.kick.com/*"],
+        "matches":    ["*://*.kick.com/dashboard/stream"],
         "js":         ["./dist/content-scripts/main.js"]
-    },{
-        "css": [ "./styles/main.css"],
-        "matches":    ["*://*.kick.com/*"]
-     } ],
+    }],
 
      "action": {
         "default_icon": {  
@@ -40,7 +37,7 @@
       },
 
      "host_permissions": [
-        "*://*.kick.com/*"
+        "*://*.kick.com/dashboard/stream"
     ]
 
 }

@@ -1,10 +1,10 @@
 {
-  "name": "kick_api_extender",
+  "name": "kick_websocket_interface",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
-    "publish": "powershell compress-archive -Force './dist','./manifest.json','./styles','./icon.png' KickAPIExtender.zip"
+    "publish": "powershell compress-archive -Force './dist','./manifest.json','./styles','./icon.png' KickWebsocketInterface.zip"
   },
   "author": "",
   "license": "ISC",
