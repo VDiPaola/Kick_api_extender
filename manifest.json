@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Kick API Extender",
+    "version": "1.0.0",
+    "description": "Kick API extender",
+    "icons":{
+        "128": "icon.png",
+        "48": "icon.png",
+        "16": "icon.png"
+    },
+
+    "permissions": [
+        "cookies",
+        "storage",
+        "debugger"
+    ],
+
+    "background":{
+        "service_worker":"./dist/background.js",
+        "type": "module"
+    },
+
+    "content_scripts": [{
+        "matches":    ["*://*.kick.com/*"],
+        "js":         ["./dist/content-scripts/main.js"]
+    },{
+        "css": [ "./styles/main.css"],
+        "matches":    ["*://*.kick.com/*"]
+     } ],
+
+     "host_permissions": [
+        "*://*.kick.com/*"
+    ]
+
+}

@@ -1,0 +1,22 @@
+{
+  "name": "kick_api_extender",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js",
+    "publish": "powershell compress-archive -Force './dist','./manifest.json','./styles','./icon.png' KickAPIExtender.zip"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "raw-loader": "^4.0.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1272.0",
+    "feather-icons": "^4.29.0",
+    "ws": "^8.12.1"
+  }
+}
