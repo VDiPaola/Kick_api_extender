@@ -43,7 +43,7 @@ class Setting{
 
 
 export class GlobalSetting {
-    // static EXAMPLE = new Setting('EXAMPLE', true); //params = key, defaultValue, isLocal=false
+    static ENDPOINTS = new Setting('ENDPOINTS', ["https://api.enzon1k.com"]);
 
     static Get(keys){
         return new Promise((resolve, reject) => {

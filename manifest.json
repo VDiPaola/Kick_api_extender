@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Kick API Extender",
+    "name": "Kick Websocket Interface",
     "version": "1.0.0",
-    "description": "Kick API extender",
+    "description": "Allows third parties to connect to authorised websockets to recieve information such as when someone follows or subscribes",
     "icons":{
         "128": "icon.png",
         "48": "icon.png",
@@ -12,7 +12,8 @@
     "permissions": [
         "cookies",
         "storage",
-        "debugger"
+        "scripting",
+        "tabs"
     ],
 
     "background":{
@@ -27,6 +28,16 @@
         "css": [ "./styles/main.css"],
         "matches":    ["*://*.kick.com/*"]
      } ],
+
+     "action": {
+        "default_icon": {  
+          "16": "icon.png",
+          "24": "icon.png", 
+          "32": "icon.png" 
+        },
+        "default_title": "Kick Websocket Interface", 
+        "default_popup": "./popup/popup.html"
+      },
 
      "host_permissions": [
         "*://*.kick.com/*"

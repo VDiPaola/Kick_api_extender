@@ -5,7 +5,7 @@ export async function execScript(tabId, func, args=[]) {
       args,
       target: {
         tabId: tabId ??
-          (await chrome.tabs.query({active: true, currentWindow: true}))[0].id
+          (await getCurrentTab()).id
       },
       world: 'MAIN',
     });
